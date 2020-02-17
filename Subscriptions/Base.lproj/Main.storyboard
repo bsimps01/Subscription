@@ -22,35 +22,5 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="LUW-KG-6zG">
-            <objects>
-                <viewController id="YX5-ZG-bYT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BJS-fv-jVC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ruA-1b-zhJ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dQV-Fk-Ab8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="931" y="120"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="URL-OQ-9NV">
-            <objects>
-                <viewController id="25W-BH-MB8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Sqm-Ff-TEg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="wDN-6W-gfr"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x3t-WC-yzH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1731" y="121"/>
-        </scene>
     </scenes>
 </document>

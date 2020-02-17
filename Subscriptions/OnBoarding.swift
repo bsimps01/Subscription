@@ -31,6 +31,7 @@ class Onboarding: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
     let subscribeButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +41,15 @@ class Onboarding: UIView {
         button.layer.masksToBounds = true
         button.backgroundColor = UIColor(white: 1.0, alpha: 0.9)
         return button
+    }()
+    
+    let messageLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = UIFont(name: "Helvetica", size: 20)
+        label.textColor = UIColor(white: 1.0, alpha: 0.8)
+        return label
     }()
     
     required init(message: String, imageName: String, isLastPage: Bool, color: UIColor) {
@@ -62,8 +72,23 @@ class Onboarding: UIView {
     }
     
     private func setup(){
+        self.backgroundColor = color
+        self.addSubview(stackView)
+        stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
+        stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.5).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+        imageView.image = UIImage(named: self.imageName)
+        imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.6).isActive = true
+        
+        messageLabel.text = message
+        self.addSubview(messageLabel)
+        stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(messageLabel)
+        
         if isLastPage {
-            subscribeButton.addSubview(subscribeButton)
+            self.addSubview(subscribeButton)
             subscribeButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40).isActive = true
             subscribeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40).isActive = true
             subscribeButton.topAnchor.constraint(equalTo: stackView.bottomAnchor).isActive = true
