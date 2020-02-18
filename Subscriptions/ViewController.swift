@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var labelView: UILabel!
-    var imageView: UIImage!
+//    var labelView: UILabel!
+//    var imageView: UIImage!
     
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -38,10 +38,10 @@ class ViewController: UIViewController {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
-    var firstView: Onboarding!
-    var secondView: Onboarding!
-    var thirdView: Onboarding!
-    var arrayofPages: [Onboarding] = []
+    var firstView: OnboardingView!
+    var secondView: OnboardingView!
+    var thirdView: OnboardingView!
+    var arrayofPages: [OnboardingView] = []
     
     let table: UITableView = {
         let table = UITableView()
@@ -112,9 +112,9 @@ class ViewController: UIViewController {
     }
     
     func setViews(){
-        firstView = Onboarding(message: "Get hooked up with classic gear", imageName: "sports-mem", isLastPage: false, color: .blue)
-        secondView = Onboarding(message: "Once every month get access to history!", imageName: "sports-mem2", isLastPage: false, color: .red)
-        thirdView = Onboarding(message: "Get started now with the hall of fame selection", imageName: "sports-mem3", isLastPage: true, color: .purple)
+        firstView = OnboardingView(message: "Get hooked up with classic gear", imageName: "sports-mem", isLastPage: false, color: .blue)
+        secondView = OnboardingView(message: "Once every month get access to history!", imageName: "sports-mem2", isLastPage: false, color: .red)
+        thirdView = OnboardingView(message: "Get started now with the hall of fame selection", imageName: "sports-mem3", isLastPage: true, color: .purple)
         
         arrayofPages = [firstView, secondView, thirdView]
         
@@ -174,9 +174,15 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIScrollViewDelegate {
-        func scrollViewDidEndDecelerating(_ scrollView: UIScrollView){
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView){
             let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+       if scrollView.contentOffset.y > 0 || scrollView.contentOffset.y < 0 {
+          scrollView.contentOffset.y = 0
+       }
     }
 }
 

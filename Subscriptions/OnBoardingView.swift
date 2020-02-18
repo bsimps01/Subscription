@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Onboarding: UIView {
+class OnboardingView: UIView {
     
     var message: String!
     var imageName: String!
@@ -74,6 +74,7 @@ class Onboarding: UIView {
     private func setup(){
         self.backgroundColor = color
         self.addSubview(stackView)
+        stackView.addArrangedSubview(imageView)
         stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
         stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.5).isActive = true
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -83,8 +84,6 @@ class Onboarding: UIView {
         imageView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.6).isActive = true
         
         messageLabel.text = message
-        self.addSubview(messageLabel)
-        stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(messageLabel)
         
         if isLastPage {
