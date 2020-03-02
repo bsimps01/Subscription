@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         view.distribution = .fillEqually
         return view
     }()
+    
     let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.currentPage = 0
@@ -38,17 +39,11 @@ class ViewController: UIViewController {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
+    
     var firstView: OnboardingView!
     var secondView: OnboardingView!
     var thirdView: OnboardingView!
     var arrayofPages: [OnboardingView] = []
-    
-    let table: UITableView = {
-        let table = UITableView()
-        table.translatesAutoresizingMaskIntoConstraints = false
-        return table
-    }()
-    let treeArray = [String](repeating: "🌲 planted", count: 100)
     
     
     
@@ -61,27 +56,6 @@ class ViewController: UIViewController {
         //setTable()
         
     }
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return treeArray.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "TreeCell", for: indexPath)
-//        cell.textLabel?.text = "\(indexPath.row) \(treeArray[indexPath.row])"
-//        return cell
-//    }
-    
-//    func setTable(){
-//        self.view.addSubview(table)
-//        table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor).isActive = true
-//        table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor).isActive = true
-//        table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
-//        table.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor).isActive = true
-//        table.register(UINib(nibName: "TreeCell", bundle: nil), forCellReuseIdentifier: "TreeCell")
-//        table.delegate = self
-//        table.delegate = self
-//    }
     
     func setupScrollView(){
         //Sets the dimensions for the ScrollView
@@ -130,6 +104,7 @@ class ViewController: UIViewController {
     @objc func loginPage(){
         self.view.window!.rootViewController = LoginPage()
     }
+    
     func setPageControl(){
         //Sets the bottom cursor to reflect the page the user is on
         pageControl.numberOfPages = arrayofPages.count

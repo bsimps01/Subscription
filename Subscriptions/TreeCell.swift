@@ -9,6 +9,13 @@
 import UIKit
 
 class TreeCell: UITableViewCell {
+    
+    let table: UITableView = {
+        let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        return table
+    }()
+    let treeArray = [String](repeating: "🌲 planted", count: 100)
 
     override func awakeFromNib() {
         super.awakeFromNib()
