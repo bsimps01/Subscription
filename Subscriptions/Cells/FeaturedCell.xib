@@ -20,9 +20,8 @@
                         <rect key="frame" x="5" y="5" width="108" height="96"/>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgd-en-4mZ">
-                        <rect key="frame" x="33" y="41" width="52" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgd-en-4mZ">
+                        <rect key="frame" x="5" y="5" width="108" height="24"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -31,9 +30,12 @@
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="E68-fE-5p3" secondAttribute="bottom" constant="5" id="G2O-CL-nvK"/>
+                <constraint firstAttribute="trailing" secondItem="Hgd-en-4mZ" secondAttribute="trailing" constant="5" id="NSy-g3-Elm"/>
                 <constraint firstAttribute="trailing" secondItem="E68-fE-5p3" secondAttribute="trailing" constant="5" id="VPP-9X-EHe"/>
+                <constraint firstItem="Hgd-en-4mZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="dOH-ue-Bho"/>
                 <constraint firstItem="E68-fE-5p3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="eYG-Cv-mCr"/>
                 <constraint firstItem="E68-fE-5p3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="kZu-MS-hyH"/>
+                <constraint firstItem="Hgd-en-4mZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="xaZ-T7-20q"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="118" height="106"/>

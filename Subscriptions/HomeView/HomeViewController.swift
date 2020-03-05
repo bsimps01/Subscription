@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
         collectionView.register(UINib(nibName: "FavoritesCell", bundle: .main), forCellWithReuseIdentifier: FavoritesCell.identifier)
         self.view.addSubview(collectionView)
         collectionView.reloadData()
+
     }
     
     override func viewDidLoad() {
@@ -45,6 +46,7 @@ class HomeViewController: UIViewController {
         setupViews()
         self.view.backgroundColor = UIColor.purple
         navigationItem.title = "Dynasty Select"
+        TabBarController()
         // Do any additional setup after loading the view.
     }
     

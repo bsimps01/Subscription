@@ -9,30 +9,38 @@
 import SwiftUI
 import UIKit
 
-class TabBarController: UITabBarController {
+class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
-        self.delegate = self
+        //self.delegate = self
+        self.tabBar.barTintColor = UIColor.purple
+        self.tabBar.tintColor = UIColor.yellow
     }
     
     func setupViewControllers() {
         
         let hvc = HomeViewController()
-        hvc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
+        hvc.title = "Home"
+        hvc.tabBarItem = UITabBarItem(title: hvc.title, image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
         let homeNav = UINavigationController(rootViewController: hvc)
 
         let nb = NewBoxesViewController()
-        nb.tabBarItem = UITabBarItem(title: "New Box", image: UIImage(named: "newbox"), tag: 0)
+        nb.title = "New Box"
+        nb.tabBarItem = UITabBarItem(title: nb.title, image: UIImage(named: "newbox"), selectedImage: UIImage(named: "newbox"))
         let nbNav = UINavigationController(rootViewController: nb)
         
         let history = HistoryBoxes()
+        history.title = "History"
         let boxesH = UINavigationController(rootViewController: history)
-        history.tabBarItem = UITabBarItem(title: "History", image: UIImage(named: "trophy"), tag: 0)
+        history.tabBarItem = UITabBarItem(title: history.title, image: UIImage(named: "trophy"), selectedImage: UIImage(named: "trophy"))
 
-        
-        viewControllers = [homeNav, nbNav, boxesH]
+        let profileVC = ContentView()
+        let profNavVC = UIHostingController(rootView: profileVC)
+        let profileNav = UINavigationController(rootViewController: profNavVC)
+        profileNav.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "user"), tag: 0)
+        viewControllers = [homeNav, nbNav, boxesH, profileNav]
     }
     
 
@@ -46,10 +54,7 @@ class TabBarController: UITabBarController {
     }
     */
 
-}
-
-extension TabBarController: UITabBarControllerDelegate {
-    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("Selected a new view controller")
     }
 }

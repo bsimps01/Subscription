@@ -24,17 +24,18 @@ struct FeaturedBoxes: Section {
     "lsu",
     ]
     let textPlace = [
-    "angels",
-    "lakers",
-    "manchester",
-    "trojans",
+    "Angels",
+    "Lakers",
+    "Manchester",
+    "Trojans",
     "Yankees",
-    "kings",
-    "jays",
+    "Kings",
+    "Blue Jays",
     "49ers",
-    "bruins",
-    "lsu",
+    "Bruins",
+    "LSU",
     ]
+    
     func layoutSection() -> NSCollectionLayoutSection? {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         
