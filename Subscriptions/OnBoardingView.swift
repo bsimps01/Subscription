@@ -6,7 +6,6 @@
 //  Copyright © 2020 Benjamin Simpson. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class OnboardingView: UIView {
