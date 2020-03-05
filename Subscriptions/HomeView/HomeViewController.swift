@@ -46,7 +46,6 @@ class HomeViewController: UIViewController {
         setupViews()
         self.view.backgroundColor = UIColor.purple
         navigationItem.title = "Dynasty Select"
-        TabBarController()
         // Do any additional setup after loading the view.
     }
     

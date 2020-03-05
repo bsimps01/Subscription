@@ -27,7 +27,7 @@ class HistoryBoxes: UIViewController {
     }
     
     func setTable(){
-        self.view.addSubview(view)
+        view.addSubview(tableview)
         view.backgroundColor = .purple
         
         tableview.register(HistoryCell.self, forCellReuseIdentifier: "HistoryCell")

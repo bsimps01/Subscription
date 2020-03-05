@@ -14,9 +14,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
-        //self.delegate = self
-        self.tabBar.barTintColor = UIColor.purple
-        self.tabBar.tintColor = UIColor.yellow
+        self.delegate = self
+        //self.tabBar.barTintColor = UIColor.purple
+        //self.tabBar.tintColor = UIColor.yellow
     }
     
     func setupViewControllers() {
@@ -40,6 +40,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let profNavVC = UIHostingController(rootView: profileVC)
         let profileNav = UINavigationController(rootViewController: profNavVC)
         profileNav.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "user"), tag: 0)
+        
         viewControllers = [homeNav, nbNav, boxesH, profileNav]
     }
     

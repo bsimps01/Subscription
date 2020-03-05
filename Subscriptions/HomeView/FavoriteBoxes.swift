@@ -14,11 +14,15 @@ struct FavoriteBoxes: Section {
     "angels",
     "lakers",
     "trojans",
+    "warriors",
+    "chargers",
     ]
     let textPlace = [
-    "angels",
-    "lakers",
-    "trojans",
+    "Anaheim Angels",
+    "Los Angeles Lakers",
+    "USC Trojans",
+    "Golden State Warriors",
+    "San Diego Chargers",
     ]
     
     func layoutSection() -> NSCollectionLayoutSection? {

@@ -118,7 +118,7 @@ class LoginPage: UIViewController {
         }
 
     @objc func HomePage(){
-        self.view.window!.rootViewController = HomeViewController()
+        self.view.window!.rootViewController = TabBarController()
     }
 
 }
