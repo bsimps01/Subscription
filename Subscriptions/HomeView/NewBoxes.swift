@@ -24,7 +24,7 @@ class NewBoxesViewController: UIViewController, UICollectionViewDataSource, UICo
     let data: [NewBox] = [NewBox(image: #imageLiteral(resourceName: "manchester"), name: "Manchester"),
                           NewBox(image: #imageLiteral(resourceName: "kings"), name: "Kings"),
                           NewBox(image: #imageLiteral(resourceName: "49ers"), name: "49ers"),
-                          NewBox(image: #imageLiteral(resourceName: "bruins"), name: "bruins"),
+                          NewBox(image: #imageLiteral(resourceName: "bruins"), name: "Bruins"),
     ]
     
     override func viewDidLoad() {
